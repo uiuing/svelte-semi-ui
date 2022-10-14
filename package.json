@@ -1,0 +1,32 @@
+{
+  "name": "svelte-semi-ui",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/uiuing/svelte-semi-ui.git",
+  "author": "uiuing <uiuing@foxmail.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@douyinfe/semi-foundation": "^2.20.7",
+    "@storybook/addon-svelte-csf": "^2.0.8",
+    "storybook": "^6.5.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/svelte": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
+    "svelte": "^3.50.1",
+    "svelte-loader": "^3.1.3"
+  }
+}
