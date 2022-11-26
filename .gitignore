@@ -237,3 +237,4 @@ tmp
 
 ### lock ###
 yarn.lock
+/.npmrc

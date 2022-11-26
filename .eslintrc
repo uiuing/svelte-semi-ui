@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "svelte3"],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:promise/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "no-labels": 0,
+    "no-restricted-syntax": 0,
+    "prettier/prettier": "error",
+    "comma-dangle": ["error", "never"],
+    "semi": ["error", "never"]
+  }
+}
