@@ -10,7 +10,6 @@ static/designToken.json
 
 # dependencies
 /node_modules
-packages/**/node_modules
 
 # output
 .build_temp
@@ -18,9 +17,6 @@ output
 dist
 build
 _site
-packages/**/lib
-packages/semi-theme-default/css/semi.css
-packages/semi-theme-default/semi.scss
 public
 storybook-static/
 *.zip
@@ -100,7 +96,6 @@ test/merged
 
 # node-waf configuration
 .lock-wscript
-package-lock.json
 
 # Optional npm cache directory
 .npm
