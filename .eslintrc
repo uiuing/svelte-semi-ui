@@ -3,30 +3,39 @@
     "browser": true,
     "node": true
   },
-  "plugins": ["@typescript-eslint", "svelte3"],
+  "plugins": ["simple-import-sort", "@typescript-eslint", "prettier"],
   "extends": [
-    "airbnb-typescript",
+    "airbnb-base",
+    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
-    "plugin:eslint-comments/recommended",
-    "plugin:promise/recommended",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "plugin:svelte/recommended",
+    "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.json"]
+    "project": ["./tsconfig.json"],
+    "extraFileExtensions": [".svelte"]
   },
   "overrides": [
     {
       "files": ["*.svelte"],
-      "processor": "svelte3/svelte3"
+      "parser": "svelte-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      }
     }
   ],
-  "parser": "@typescript-eslint/parser",
   "rules": {
-    "no-labels": 0,
-    "no-restricted-syntax": 0,
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "prettier/prettier": "error",
-    "comma-dangle": ["error", "never"],
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.stories.*"],
+        "peerDependencies": true
+      }
+    ]
   }
 }
